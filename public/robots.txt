@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://moviedirectory.vercel.app/sitemap.xml
