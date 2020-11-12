@@ -17,7 +17,7 @@ const customTheme: DefaultTheme = {
     ...theme.fontWeights,
     light: 300,
     normal: 400,
-    bold: 500,
+    bold: 600,
   },
   radii: {
     ...theme.radii,
