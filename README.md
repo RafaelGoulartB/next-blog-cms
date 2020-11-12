@@ -1,4 +1,4 @@
-<h1 align="center">Movie Directory with CMS</h1>
+<h1 align="center">Blog with CMS</h1>
 
 <p align="center">	
    <a href="https://www.linkedin.com/in/rafael-goulartb/">
@@ -18,12 +18,12 @@
   <img alt="" src="https://img.shields.io/github/repo-size/RafaelGoulartB/movie-directory-cms?color=03B0E8" />
 </p>
 
-> Movie Directory made with Next.js and CMS
+> Blog made with Next.js and GraphCMS
 
 <div align="center">
   <sub>The ecommerce project. Built with ❤︎ by
     <a href="https://github.com/RafaelGoulartB">Rafael Goulart</a> and
-    <a href="https://github.com/RafaelGoulartB/movie-directory-cms/graphs/contributors">
+    <a href="https://github.com/RafaelGoulartB/blog-cms/graphs/contributors">
       contributors
     </a>
   </sub>
@@ -46,21 +46,30 @@
 * [Contributing](#tada-contributing)
 * [License](#closed_book-license)
 
+<h2 align="left"> 📥 Layout available at figma community: </h2>
+<p align="center">
+    <a title="Acess Figma Community" href="https://www.figma.com/community/file/825069539366152961">
+        <img alt="Figma Community" src="https://img.shields.io/badge/Figma Community-black?style=flat-square&logo=figma&logoColor=red" width="200px" />
+    </a>
+</p>
+
 # :eyes: Demo Website
 The demo website can be missing some features, clone and run the project to a full experience. <br>
-👉  demo: https://moviedirectory.vercel.app/
+👉  demo: https://blogcms.vercel.app/
 
 # :computer: Technologies
 This project was made using the follow technologies:
 
 * [Next.js](https://nextjs.org/) - To SSR and routes control     
 * [Vercel](https://vercel.com/) - To deploy website     
+* [GraphCMS](https://graphcms.com/) - To content management
 
 # :rocket: Features
 
-- List Movies
-- Filter by Category
-- Search for Movies
+- List Articles
+- Show articles
+- Edit Articles
+- Search
 - Pagination
   
 # :construction_worker: How to run
@@ -80,14 +89,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 # :bug: Issues
 
-Feel free to **file a new issue** with a respective title and description on the the [Movie Directory](https://github.com/RafaelGoulartB/movie-directory-cms/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+Feel free to **file a new issue** with a respective title and description on the the [Blog CMS](https://github.com/RafaelGoulartB/blog-cms/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
 # :tada: Contributing
 First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
 Here's some tips:
 
-* Check the [issues page](https://github.com/RafaelGoulartB/movie-directory-cms/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
+* Check the [issues page](https://github.com/RafaelGoulartB/blog-cms/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
 * Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
 Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
