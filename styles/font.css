@@ -1,0 +1,40 @@
+/* poppins-300 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/poppins-v15-latin-300.eot');
+  src: local('Poppins Light'), local('Poppins-Light'),
+    url('/fonts/poppins-v15-latin-300.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/poppins-v15-latin-300.woff2') format('woff2'),
+    url('/fonts/poppins-v15-latin-300.woff') format('woff'),
+    url('/fonts/poppins-v15-latin-300.ttf') format('truetype'),
+    url('/fonts/poppins-v15-latin-300.svg#Poppins') format('svg');
+}
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/poppins-v15-latin-regular.eot');
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+    url('/fonts/poppins-v15-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/poppins-v15-latin-regular.woff2') format('woff2'),
+    url('/fonts/poppins-v15-latin-regular.woff') format('woff'),
+    url('/fonts/poppins-v15-latin-regular.ttf') format('truetype'),
+    url('/fonts/poppins-v15-latin-regular.svg#Poppins') format('svg');
+}
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/poppins-v15-latin-600.eot');
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+    url('/fonts/poppins-v15-latin-600.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/poppins-v15-latin-600.woff2') format('woff2'),
+    url('/fonts/poppins-v15-latin-600.woff') format('woff'),
+    url('/fonts/poppins-v15-latin-600.ttf') format('truetype'),
+    url('/fonts/poppins-v15-latin-600.svg#Poppins') format('svg');
+}
