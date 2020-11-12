@@ -2,26 +2,26 @@
 
 <p align="center">	
    <a href="https://www.linkedin.com/in/rafael-goulartb/">
-      <img alt="Rafael Goulart" src="https://img.shields.io/badge/-RafaelGoulartB-03B0E8?style=flat&logo=Linkedin&logoColor=white" />
+      <img alt="Rafael Goulart" src="https://img.shields.io/badge/-RafaelGoulartB-FFD900?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <a href="https://github.com/RafaelGoulartB/movie-directory-cms#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-03B0E8.svg" target="_blank" />
+  <a href="https://github.com/RafaelGoulartB/blog-cms#readme">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-FFD900.svg" target="_blank" />
   </a>
-  <a href="https://github.com/RafaelGoulartB/movie-directory-cms/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-03B0E8.svg" target="_blank" />
+  <a href="https://github.com/RafaelGoulartB/blog-cms/graphs/commit-activity">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-FFD900.svg" target="_blank" />
   </a>
-  <a href="https://github.com/RafaelGoulartB/movie-directory-cms/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-03B0E8.svg" target="_blank" />
+  <a href="https://github.com/RafaelGoulartB/blog-cms/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-FFD900.svg" target="_blank" />
   </a>
-  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/RafaelGoulartB/movie-directory-cms?color=03B0E8" />
-  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/RafaelGoulartB/movie-directory-cms?color=03B0E8" />
-  <img alt="" src="https://img.shields.io/github/repo-size/RafaelGoulartB/movie-directory-cms?color=03B0E8" />
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/RafaelGoulartB/blog-cms?color=FFD900" />
+  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/RafaelGoulartB/blog-cms?color=FFD900" />
+  <img alt="" src="https://img.shields.io/github/repo-size/RafaelGoulartB/blog-cms?color=FFD900" />
 </p>
 
 > Blog made with Next.js and GraphCMS
 
 <div align="center">
-  <sub>The ecommerce project. Built with ❤︎ by
+  <sub>The Blog project. Built with ❤︎ by
     <a href="https://github.com/RafaelGoulartB">Rafael Goulart</a> and
     <a href="https://github.com/RafaelGoulartB/blog-cms/graphs/contributors">
       contributors
