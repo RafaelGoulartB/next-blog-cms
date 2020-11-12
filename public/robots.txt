@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://moviedirectory.vercel.app/sitemap.xml
+Sitemap: https://blogcms.vercel.app/sitemap.xml

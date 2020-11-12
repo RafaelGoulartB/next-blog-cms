@@ -1,11 +1,11 @@
 const seoConfig = {
-  title: "Movie Directory CMS",
-  description: "Movie Directory made with Next.js and CMS",
+  title: "Blog CMS",
+  description: "Blog made with Next.js and CMS",
   openGraph: {
-    url: "https://moviedirectory.vercel.app/",
-    title: "Movie Directory made with CMS",
-    description: "Movie Directory made with Next.js and CMS, Open-source project.",
-    site_name: "Movie Directory CMS",
+    url: "https://blogcms.vercel.app/",
+    title: "Blog made with CMS",
+    description: "Blog made with Next.js and CMS, Open-source project.",
+    site_name: "Blog CMS",
   },
 };
 

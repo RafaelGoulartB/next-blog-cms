@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta title="Movie Directory made with CMS" />
+          <meta title="Blog made with CMS" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#fafafa" />
           <link rel="icon" href="/favicons/favicon.ico" />
