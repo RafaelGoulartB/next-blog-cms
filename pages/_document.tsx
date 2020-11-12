@@ -5,6 +5,18 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/poppins-v15-latin-300.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/poppins-v15-latin-regular.woff2"
+            as="font"
+            crossOrigin=""
+          />
           <meta title="Blog made with CMS" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#fafafa" />

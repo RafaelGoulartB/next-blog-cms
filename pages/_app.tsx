@@ -5,6 +5,7 @@ import { DefaultSeo } from 'next-seo'
 import ThemeContainer from '../contexts/theme/theme-container'
 
 import seoConfig from '../config/seo'
+import '../styles/font.css'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
