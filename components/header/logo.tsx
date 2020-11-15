@@ -1,12 +1,14 @@
 import React from 'react'
-import { Flex, Heading, Text } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 
 const Logo: React.FC = () => {
   return (
     <Flex align="center" mr={5}>
       <Link href="/">
-        <Heading as="h1">HotCoffee</Heading>
+        <Heading as="h1" color="black" fontSize="xl">
+          HotCoffee
+        </Heading>
       </Link>
     </Flex>
   )
