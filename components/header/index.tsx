@@ -1,11 +1,18 @@
 import React from 'react'
-import { Divider, Flex, MenuItem, Box } from '@chakra-ui/react'
+import {
+  Divider,
+  Flex,
+  MenuItem,
+  Box,
+  Link as ChakraLink,
+  Icon
+} from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router'
 import Hamburger from './hamburger'
 import Logo from './logo'
 
-import { navLinks } from './constants'
+import { navLinks, socialLinks } from './constants'
 
 interface MenuItem {
   link?: string
@@ -71,6 +78,14 @@ const Header: React.FC = props => {
             {item.label}
           </MenuItems>
         ))}
+
+        <Flex>
+          {socialLinks.map(item => (
+            <ChakraLink href="https://chakra-ui.com" isExternal>
+              <Icon as={item.icon} w={6} h={6} mr="8" color="gray.500" />
+            </ChakraLink>
+          ))}
+        </Flex>
       </Box>
     </Flex>
   )
