@@ -7,13 +7,13 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/poppins-v15-latin-300.woff2"
+            href="/fonts/inter-v2-latin-regular.woff2"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/poppins-v15-latin-regular.woff2"
+            href="/fonts/inter-v2-latin-700.woff2"
             as="font"
             crossOrigin=""
           />

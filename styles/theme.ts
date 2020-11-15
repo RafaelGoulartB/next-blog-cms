@@ -9,15 +9,14 @@ const breakpoints = ["360px", "768px", "1024px", "1500px"];
 const customTheme: DefaultTheme = {
   ...theme,
   fonts: {
-    body: "Poppins, sans- serif",
-    heading: "Poppins, sans-serif",
-    mono: "Poppins, sans-serif",
+    body: "Inter, sans- serif",
+    heading: "Inter, sans-serif",
+    mono: "Inter, sans-serif",
   },
   fontWeights: {
     ...theme.fontWeights,
-    light: 300,
     normal: 400,
-    bold: 600,
+    bold: 700,
   },
   radii: {
     ...theme.radii,
