@@ -80,7 +80,7 @@ const Header: React.FC = props => {
 
         <Flex mt={{ sm: '10', lg: '0' }}>
           {socialLinks.map(item => (
-            <ChakraLink href="https://chakra-ui.com" isExternal>
+            <ChakraLink href={item.link} isExternal>
               <Icon as={item.icon} w={6} h={6} mr="8" color="gray.500" />
             </ChakraLink>
           ))}
