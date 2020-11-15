@@ -1,13 +1,14 @@
 import React from 'react'
-import { Flex } from '@chakra-ui/core'
+import { Flex, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Logo: React.FC = () => {
   return (
     <Flex align="center" mr={5}>
       <Link href="/">
-        <Image src="/images/logo.png" width="260px" height="26x" />
+        <Heading as="h1" color="black" fontSize="xl">
+          HotCoffee
+        </Heading>
       </Link>
     </Flex>
   )

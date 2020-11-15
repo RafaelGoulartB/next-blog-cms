@@ -1,10 +1,12 @@
 import React from 'react'
-import { Divider, Flex, Box, MenuItem, PseudoBox } from '@chakra-ui/core'
+import { Flex, MenuItem, Box } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router'
-import { navLinks } from './constants'
 import Hamburger from './hamburger'
 import Logo from './logo'
+import SocialLinks from '../social-links'
+
+import { navLinks, socialLinks } from './constants'
 
 interface MenuItem {
   link?: string
@@ -16,30 +18,18 @@ const MenuItems: React.FC<MenuItem> = ({ children, link, onClick }) => {
 
   return (
     <Link href={link}>
-      <PseudoBox
+      <Box
         as="a"
-        display="block"
-        fontWeight="normal"
-        boxSizing="border-box"
-        fontSize="xl"
-        textTransform="uppercase"
+        fontWeight={router.pathname === link ? 'bold' : 'normal'}
+        fontSize="md"
         color="black"
         onClick={onClick || undefined}
-        transition="border .2s"
-        mt={['6', '6', '6', '0', '0']}
-        mr={'36px'}
-        borderBottomWidth={[
-          '0',
-          '0',
-          '0',
-          router.pathname === link ? '2px' : 'none',
-          router.pathname === link ? '2px' : 'none'
-        ]}
-        borderBottomColor={router.pathname === link ? 'black' : 'none'}
+        mt={{ sm: '6', lg: '0' }}
+        mr="9"
         _hover={{ cursor: 'pointer' }}
       >
         {children}
-      </PseudoBox>
+      </Box>
     </Link>
   )
 }
@@ -56,11 +46,9 @@ const Header: React.FC = props => {
       alignItems="center"
       justify="space-between"
       wrap="wrap"
-      padding="1.5rem"
-      paddingX={['14', '14', '14', '14', '10%']}
-      paddingY="8"
+      paddingX={{ base: 10, sm: 10, lg: 20 }}
+      paddingY={{ sm: '8', lg: '10' }}
       backgroundColor="white"
-      color="white"
       zIndex={999}
       {...props}
     >
@@ -69,23 +57,26 @@ const Header: React.FC = props => {
       <Hamburger handleToggle={handleToggle} />
 
       <Box
-        display={[
-          show ? 'block' : 'none',
-          show ? 'block' : 'none',
-          show ? 'block' : 'none',
-          'flex',
-          'flex'
-        ]}
+        display={{
+          sm: show ? 'flex' : 'none',
+          lg: 'flex'
+        }}
+        flexDir={{ sm: 'column', lg: 'row' }}
         alignItems="center"
-        width={['full', 'full', 'full', 'auto', 'auto']}
-        marginTop={['20px', '20px', '0', '0', '0']}
+        width={{ sm: 'full', lg: 'auto' }}
+        marginTop={{ sm: '20px', lg: '0' }}
       >
-        <Divider mt="8" />
         {navLinks.map(item => (
-          <MenuItems onClick={handleToggle} link={item.link}>
+          <MenuItems key={item.label} onClick={handleToggle} link={item.link}>
             {item.label}
           </MenuItems>
         ))}
+
+        <Flex mt={{ sm: '10', lg: '0' }}>
+          {socialLinks.map(item => (
+            <SocialLinks link={item.link} icon={item.icon} />
+          ))}
+        </Flex>
       </Box>
     </Flex>
   )

@@ -1,23 +1,36 @@
+import { IconType } from "react-icons/lib"
+import { AiFillInstagram, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai"
+
 export interface navLinksProps {
   label: string
+  link: string
+}
+export interface socialLinksProps {
+  icon: IconType
   link: string
 }
 
 export const navLinks: navLinksProps[] = [
   {
-    label: 'Blog',
+    label: 'Home',
     link: '/'
   },
   {
-    label: 'About',
-    link: '/about'
+    label: 'Articles',
+    link: '/articles'
+  },
+]
+export const socialLinks: socialLinksProps[] = [
+  {
+    icon: AiFillInstagram,
+    link: 'https://instagram.com'
   },
   {
-    label: 'Links',
-    link: '/links'
+    icon: AiOutlineTwitter,
+    link: 'https://twitter.com'
   },
   {
-    label: 'Portfolio',
-    link: '/portfolio'
+    icon: AiFillLinkedin,
+    link: 'https://likedin.com'
   },
 ]

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Heading } from '@chakra-ui/core'
+import { Heading, Flex } from '@chakra-ui/react'
 
 export default function Home() {
   return (
-    <>
-      <Heading>Hello World</Heading>
-    </>
+    <Flex bg="gray.100">
+      <Heading py="40">Hello World</Heading>
+    </Flex>
   )
 }

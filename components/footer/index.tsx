@@ -1,8 +1,35 @@
 import React from 'react'
-import { Text } from '@chakra-ui/core'
+import { Divider, Flex, Text } from '@chakra-ui/react'
+import { socialLinks } from '../header/constants'
+import SocialLinks from '../social-links'
 
 const Footer: React.FC = () => {
-  return <Text>Footer</Text>
+  return (
+    <>
+      <Divider />
+      <Flex
+        bg="white"
+        paddingX={{ base: 10, sm: 10, lg: 20 }}
+        paddingY={{ sm: '8', lg: '10' }}
+        justifyContent="space-between"
+        alignItems="center"
+        flexDir={{ sm: 'column', lg: 'row' }}
+      >
+        <Text display="inline" textAlign="center">
+          <Text fontWeight="bold" display="inline">
+            hotcoffee
+          </Text>{' '}
+          2020 copyright all rights reserved
+        </Text>
+
+        <Flex mt={{ sm: '10', lg: '0' }}>
+          {socialLinks.map(item => (
+            <SocialLinks link={item.link} icon={item.icon} />
+          ))}
+        </Flex>
+      </Flex>
+    </>
+  )
 }
 
 export default Footer
