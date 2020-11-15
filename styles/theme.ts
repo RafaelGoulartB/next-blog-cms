@@ -20,7 +20,7 @@ const customTheme: DefaultTheme = {
   },
   radii: {
     ...theme.radii,
-    sm: '4px',
+    sm: '5px',
     lg: '15px'
   },
   fontSizes: {
@@ -32,10 +32,15 @@ const customTheme: DefaultTheme = {
   },
   colors: {
     ...theme.colors,
-    yellow: {
-      ...theme.colors.yellow,
-      500: "#FFD900"
+    gray: {
+      ...theme.colors.gray,
+      500: "#4A5568",
+      800: "#2D3748"
     },
+    purple: {
+      ...theme.colors.purple,
+      500: "#6a47bd"
+    }
   },
   breakpoints
 }
