@@ -5,19 +5,11 @@ export interface navLinksProps {
 
 export const navLinks: navLinksProps[] = [
   {
-    label: 'Blog',
+    label: 'Home',
     link: '/'
   },
   {
-    label: 'About',
-    link: '/about'
-  },
-  {
-    label: 'Links',
-    link: '/links'
-  },
-  {
-    label: 'Portfolio',
-    link: '/portfolio'
+    label: 'Articles',
+    link: '/articles'
   },
 ]
