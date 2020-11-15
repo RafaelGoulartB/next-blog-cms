@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider, Flex, Box, MenuItem, PseudoBox } from '@chakra-ui/core'
+import { Divider, Flex, MenuItem, Box } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router'
 import { navLinks } from './constants'
@@ -16,7 +16,7 @@ const MenuItems: React.FC<MenuItem> = ({ children, link, onClick }) => {
 
   return (
     <Link href={link}>
-      <PseudoBox
+      <Box
         as="a"
         display="block"
         fontWeight="normal"
@@ -39,7 +39,7 @@ const MenuItems: React.FC<MenuItem> = ({ children, link, onClick }) => {
         _hover={{ cursor: 'pointer' }}
       >
         {children}
-      </PseudoBox>
+      </Box>
     </Link>
   )
 }
@@ -82,7 +82,7 @@ const Header: React.FC = props => {
       >
         <Divider mt="8" />
         {navLinks.map(item => (
-          <MenuItems onClick={handleToggle} link={item.link}>
+          <MenuItems key={item.label} onClick={handleToggle} link={item.link}>
             {item.label}
           </MenuItems>
         ))}
