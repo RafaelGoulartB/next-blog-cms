@@ -10,8 +10,8 @@ export const fontWeights = {
 }
 
 export const fontSizes = {
-  '3xl': '26px',
+  '3xl': '30px',
   '4xl': '38px',
   '5xl': '46px',
-  '6xl': '52px'
+  '6xl': '60px'
 }
