@@ -31,7 +31,7 @@
 
 <br />
 <div align="center">
-  <img src="./.github/screenshots/screenshot-1.png" width="640">
+  <img src="./.github/screenshots/screenshot-1.png" width="700">
 </div>
 
 ---
