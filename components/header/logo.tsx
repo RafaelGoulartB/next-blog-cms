@@ -6,7 +6,12 @@ const Logo: React.FC = () => {
   return (
     <Flex align="center" mr={5}>
       <Link href="/">
-        <Heading as="h1" color="black" fontSize="xl">
+        <Heading
+          as="h1"
+          color="black"
+          fontSize="xl"
+          _hover={{ cursor: 'pointer' }}
+        >
           HotCoffee
         </Heading>
       </Link>
