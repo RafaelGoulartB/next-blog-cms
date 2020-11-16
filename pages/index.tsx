@@ -6,7 +6,7 @@ import LatestCard from '../components/latest-card'
 import ListPost from '../components/list-post'
 import PostCard from '../components/post-card'
 import PostCardContainer from '../components/post-card/container'
-import { posts } from './constants'
+import { posts } from '../data/constants'
 
 export default function Home() {
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { monthNames, PostProps } from '../../pages/constants'
+import { monthNames, PostProps } from '../../data/constants'
 
 const PostCard: React.FC<PostProps> = ({
   id,
