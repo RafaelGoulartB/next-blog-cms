@@ -6,6 +6,7 @@ import Image from 'next/image'
 const HighlightSection: React.FC = () => {
   return (
     <Flex
+      as="article"
       minH={{ base: 'none', xl: '720px' }}
       background="#f7fafc"
       flexDir={{ sm: 'column', lg: 'row-reverse' }}

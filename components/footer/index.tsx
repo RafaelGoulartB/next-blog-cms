@@ -8,6 +8,7 @@ const Footer: React.FC = () => {
     <>
       <Divider />
       <Flex
+        as="footer"
         bg="white"
         paddingX={{ base: 10, sm: 10, lg: 20 }}
         paddingY={{ sm: '8', lg: '10' }}

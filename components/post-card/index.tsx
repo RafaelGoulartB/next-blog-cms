@@ -2,51 +2,47 @@ import React from 'react'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { monthNames, PostProps } from '../../data/constants'
 
-const LatestCard: React.FC = () => {
+const PostCard: React.FC<PostProps> = ({
+  id,
+  title,
+  description,
+  image,
+  date
+}) => {
   return (
     <Flex
       as="article"
-      flexDir={{ sm: 'column', lg: 'row-reverse' }}
+      flexDir="column"
       boxSizing="border-box"
-      width="100%"
-      my="12"
+      width={{ sm: '100%', lg: '32%' }}
       boxShadow="0px 5px 4px rgba(221, 221, 221, 0.25)"
       borderRadius="sm"
       borderWidth="1px"
       borderStyle="solid"
       borderColor="gray.200"
+      mt={{ sm: '8', lg: '0' }}
     >
       {/* Image */}
-      <Flex width={{ sm: '100%', lg: '40%' }} position="relative">
-        <Image
-          src="/images/posts/latest-post.png"
-          alt="Post Image"
-          layout="fill"
-          quality={100}
-        />
+      <Flex position="relative" alignSelf="center">
+        <Image src={image} alt={title} quality={100} width={480} height={290} />
       </Flex>
 
       {/* Text */}
-      <Flex
-        flexDir="column"
-        py="12"
-        pl={{ sm: '8', lg: '14' }}
-        pr={{ sm: '8', lg: '20' }}
-        width={{ sm: '100%', lg: '60%' }}
-      >
+      <Flex flexDir="column" py="12" pl="8" pr="8">
         <Heading as="h3" fontSize="3xl" color="gray.800">
-          long established
+          {title}
         </Heading>
         <Text py="9" color="gray.300">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that....
+          {description}
         </Text>
 
         <Flex justifyContent="space-between">
-          <Text color="gray.300">May 20th 2020</Text>
-          <Link href="/post/1">
+          <Text color="gray.300">{`${
+            monthNames[date.getMonth()]
+          } ${date.getDate()}th ${date.getFullYear()}`}</Text>
+          <Link href={`/posts/${id}`}>
             <Text
               as="a"
               color="gray.800"
@@ -62,4 +58,4 @@ const LatestCard: React.FC = () => {
   )
 }
 
-export default LatestCard
+export default PostCard
