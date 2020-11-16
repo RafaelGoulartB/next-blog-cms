@@ -13,7 +13,15 @@ export default function Home() {
     <Box as="main">
       <HeadSection />
       <ListPost>
-        <LatestCard />
+        <LatestCard
+          id="1"
+          title="long established"
+          description="It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that...."
+          image="/images/posts/latest-post.png"
+          date={new Date()}
+        />
         <PostCardContainer>
           {posts.map(post => (
             <PostCard

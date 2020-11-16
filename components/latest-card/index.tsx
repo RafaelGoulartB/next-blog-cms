@@ -2,8 +2,15 @@ import React from 'react'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { monthNames, PostProps } from '../../data/constants'
 
-const LatestCard: React.FC = () => {
+const LatestCard: React.FC<PostProps> = ({
+  id,
+  title,
+  description,
+  image,
+  date
+}) => {
   return (
     <Flex
       as="article"
@@ -19,12 +26,7 @@ const LatestCard: React.FC = () => {
     >
       {/* Image */}
       <Flex width={{ sm: '100%', lg: '40%' }} position="relative">
-        <Image
-          src="/images/posts/latest-post.png"
-          alt="Post Image"
-          layout="fill"
-          quality={100}
-        />
+        <Image src={image} alt="Post Image" layout="fill" quality={100} />
       </Flex>
 
       {/* Text */}
@@ -36,16 +38,16 @@ const LatestCard: React.FC = () => {
         width={{ sm: '100%', lg: '60%' }}
       >
         <Heading as="h3" fontSize="3xl" color="gray.800">
-          long established
+          {title}
         </Heading>
         <Text py="9" color="gray.300">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that....
+          {description}
         </Text>
 
         <Flex justifyContent="space-between">
-          <Text color="gray.300">May 20th 2020</Text>
+          <Text color="gray.300">{`${
+            monthNames[date.getMonth()]
+          } ${date.getDate()}th ${date.getFullYear()}`}</Text>
           <Link href="/post/1">
             <Text
               as="a"
