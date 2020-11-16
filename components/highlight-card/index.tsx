@@ -2,8 +2,15 @@ import React from 'react'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { monthNames, PostProps } from '../../data/constants'
 
-const HighlightSection: React.FC = () => {
+const HighlightSection: React.FC<PostProps> = ({
+  id,
+  title,
+  description,
+  image,
+  date
+}) => {
   return (
     <Flex
       as="article"
@@ -17,12 +24,7 @@ const HighlightSection: React.FC = () => {
     >
       {/* Image */}
       <Flex width={{ sm: '100%', lg: '60%' }} position="relative">
-        <Image
-          src="/images/posts/highlight-post.png"
-          alt="Post Image"
-          layout="fill"
-          quality={100}
-        />
+        <Image src={image} alt="Post Image" layout="fill" quality={100} />
       </Flex>
 
       {/* Text */}
@@ -35,17 +37,17 @@ const HighlightSection: React.FC = () => {
         width={{ sm: '100%', lg: '40%' }}
       >
         <Heading as="h3" fontSize="4xl" color="gray.800">
-          What is Lorem Ipsum?
+          {title}
         </Heading>
         <Text py="9" color="gray.300">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution...
+          {description}
         </Text>
 
         <Flex justifyContent="space-between">
-          <Text color="gray.300">May 20</Text>
-          <Link href="/post/1">
+          <Text color="gray.300">{`${
+            monthNames[date.getMonth()]
+          } ${date.getDate()}th ${date.getFullYear()}`}</Text>
+          <Link href={`/posts/${id}`}>
             <Text
               as="a"
               color="gray.800"

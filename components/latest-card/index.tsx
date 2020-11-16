@@ -48,7 +48,7 @@ const LatestCard: React.FC<PostProps> = ({
           <Text color="gray.300">{`${
             monthNames[date.getMonth()]
           } ${date.getDate()}th ${date.getFullYear()}`}</Text>
-          <Link href="/post/1">
+          <Link href={`/posts/${id}`}>
             <Text
               as="a"
               color="gray.800"
