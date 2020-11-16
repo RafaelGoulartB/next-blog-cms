@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 
         <Flex mt={{ sm: '10', lg: '0' }}>
           {socialLinks.map(item => (
-            <SocialLinks link={item.link} icon={item.icon} />
+            <SocialLinks key={item.link} link={item.link} icon={item.icon} />
           ))}
         </Flex>
       </Flex>
