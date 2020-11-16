@@ -17,12 +17,15 @@ const LatestCard: React.FC<PostProps> = ({
       flexDir={{ sm: 'column', lg: 'row-reverse' }}
       boxSizing="border-box"
       width="100%"
-      my="12"
+      mt="6"
       boxShadow="0px 5px 4px rgba(221, 221, 221, 0.25)"
       borderRadius="sm"
       borderWidth="1px"
       borderStyle="solid"
       borderColor="gray.200"
+      _last={{
+        mb: '6'
+      }}
     >
       {/* Image */}
       <Flex width={{ sm: '100%', lg: '40%' }} position="relative">
