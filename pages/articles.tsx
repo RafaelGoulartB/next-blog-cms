@@ -4,8 +4,6 @@ import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
 import { posts } from '../data/constants'
 
-// import { Container } from './styles';
-
 const About: React.FC = () => {
   return (
     <Box as="main">
