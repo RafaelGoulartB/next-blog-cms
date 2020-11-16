@@ -26,7 +26,7 @@ const HighlightSection: React.FC = () => {
       {/* Text */}
       <Flex
         flexDir="column"
-        py="12"
+        py="24"
         pl={{ sm: '8', lg: '14' }}
         pr={{ sm: '8', lg: '20' }}
         width={{ sm: '100%', lg: '45%' }}
