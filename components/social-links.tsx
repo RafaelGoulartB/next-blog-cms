@@ -9,8 +9,8 @@ interface SocialLinksProps {
 
 const SocialLinks: React.FC<SocialLinksProps> = ({ link, icon }) => {
   return (
-    <ChakraLink href={link} isExternal>
-      <Icon as={icon} w={6} h={6} mr="8" color="gray.500" />
+    <ChakraLink href={link} isExternal mr="8" _last={{ mr: '0' }}>
+      <Icon as={icon} w={6} h={6} color="gray.500" />
     </ChakraLink>
   )
 }
