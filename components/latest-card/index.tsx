@@ -6,6 +6,7 @@ import Image from 'next/image'
 const LatestCard: React.FC = () => {
   return (
     <Flex
+      as="article"
       flexDir={{ sm: 'column', lg: 'row-reverse' }}
       boxSizing="border-box"
       width="100%"
