@@ -1,14 +1,13 @@
 import React from 'react'
-import { Divider, Flex, Text } from '@chakra-ui/react'
+import { Divider, Flex, Text, Box } from '@chakra-ui/react'
 import { socialLinks } from '../header/constants'
 import SocialLinks from '../social-links'
 
 const Footer: React.FC = () => {
   return (
-    <>
+    <Box as="footer" mt="16">
       <Divider />
       <Flex
-        as="footer"
         bg="white"
         paddingX={{ base: 10, sm: 10, lg: 20 }}
         paddingY={{ sm: '8', lg: '10' }}
@@ -29,7 +28,7 @@ const Footer: React.FC = () => {
           ))}
         </Flex>
       </Flex>
-    </>
+    </Box>
   )
 }
 
