@@ -1,10 +1,16 @@
-import React from 'react'
+import { GetStaticProps, NextPage } from 'next'
 import { Box } from '@chakra-ui/react'
 import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
-import { posts } from '../data/constants'
 
-const About: React.FC = () => {
+import { PostProps, Posts } from '../data/posts'
+
+interface Props {
+  posts: PostProps[]
+}
+
+const About: NextPage<Props> = ({ posts }) => {
+  console.log(posts)
   return (
     <Box as="main">
       <ListPost>
@@ -21,6 +27,11 @@ const About: React.FC = () => {
       </ListPost>
     </Box>
   )
+}
+
+export const getStaticProps: GetStaticProps = async context => {
+  const postsJson = JSON.parse(JSON.stringify(Posts))
+  return { props: { posts: postsJson } }
 }
 
 export default About

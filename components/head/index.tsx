@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { HeadContentProps } from '../../data/head'
 
-const HeadSection: NextPage<HeadContentProps> = ({title, description}) => {
+const HeadSection: NextPage<HeadContentProps> = ({ title, description }) => {
   console.log(title)
   return (
     <Flex bg="gray.100" paddingX={{ sm: 10, lg: 32 }}>
@@ -21,8 +21,7 @@ const HeadSection: NextPage<HeadContentProps> = ({title, description}) => {
         {/* Text Left */}
         <Flex flexDir="column">
           <Heading fontSize={{ sm: '5xl', lg: '6xl' }} maxW="360px">
-            {title}{' '}
-            <Image src="/images/coffee.png" width={70} height={68} />
+            {title} <Image src="/images/coffee.png" width={70} height={68} />
           </Heading>
           <Text color="gray.500" fontSize={{ sm: '2xl', lg: '3xl' }} pt="10">
             {description}

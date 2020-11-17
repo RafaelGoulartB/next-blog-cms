@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { monthNames, PostProps } from '../../data/constants'
+import { monthNames, PostProps } from '../../data/posts'
 
 const HighlightSection: React.FC<PostProps> = ({
   id,
@@ -45,8 +45,10 @@ const HighlightSection: React.FC<PostProps> = ({
 
         <Flex justifyContent="space-between">
           <Text color="gray.300">{`${
-            monthNames[date.getMonth()]
-          } ${date.getDate()}th ${date.getFullYear()}`}</Text>
+            monthNames[new Date(date).getMonth()]
+          } ${new Date(date).getDate()}th ${new Date(
+            date
+          ).getFullYear()}`}</Text>
           <Link href={`/posts/${id}`}>
             <Text
               as="a"

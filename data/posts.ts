@@ -6,7 +6,7 @@ export interface PostProps {
   date: Date,
 }
 
-export const posts: PostProps[] = [
+export const Posts: PostProps[] = [
   {
     id: '1',
     title: 'long established',
