@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { HeadContentProps } from '../../data/head'
 
 const HeadSection: NextPage<HeadContentProps> = ({ title, description }) => {
-  console.log(title)
   return (
     <Flex bg="gray.100" paddingX={{ sm: 10, lg: 32 }}>
       <Flex

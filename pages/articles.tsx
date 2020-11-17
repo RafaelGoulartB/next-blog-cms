@@ -10,7 +10,6 @@ interface Props {
 }
 
 const About: NextPage<Props> = ({ posts }) => {
-  console.log(posts)
   return (
     <Box as="main">
       <ListPost>
