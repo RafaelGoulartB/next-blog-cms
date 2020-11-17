@@ -3,7 +3,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  display: swap;
+  font-display: swap;
   src: url('/fonts/inter-v2-latin-regular.eot');
   src: local(''),
     url('/fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
@@ -17,7 +17,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  display: swap;
+  font-display: swap;
   src: url('/fonts/inter-v2-latin-700.eot');
   src: local(''),
     url('/fonts/inter-v2-latin-700.eot?#iefix') format('embedded-opentype'),

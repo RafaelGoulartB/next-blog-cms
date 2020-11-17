@@ -6,7 +6,7 @@ export interface PostProps {
   date: Date,
 }
 
-export const posts: PostProps[] = [
+export const Posts: PostProps[] = [
   {
     id: '1',
     title: 'long established',
@@ -15,14 +15,14 @@ export const posts: PostProps[] = [
     date: new Date()
   },
   {
-    id: '1',
+    id: '2',
     title: 'long established',
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....',
     image: '/images/posts/post-2.png',
     date: new Date()
   },
   {
-    id: '1',
+    id: '3',
     title: 'long established',
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....',
     image: '/images/posts/post-3.png',

@@ -1,8 +1,10 @@
+import { NextPage } from 'next'
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 import Image from 'next/image'
+import { HeadContentProps } from '../../data/head'
 
-const HeadSection: React.FC = () => {
+const HeadSection: NextPage<HeadContentProps> = ({ title, description }) => {
   return (
     <Flex bg="gray.100" paddingX={{ sm: 10, lg: 32 }}>
       <Flex
@@ -18,11 +20,10 @@ const HeadSection: React.FC = () => {
         {/* Text Left */}
         <Flex flexDir="column">
           <Heading fontSize={{ sm: '5xl', lg: '6xl' }} maxW="360px">
-            Make better coffee{' '}
-            <Image src="/images/coffee.png" width={70} height={68} />
+            {title} <Image src="/images/coffee.png" width={70} height={68} />
           </Heading>
           <Text color="gray.500" fontSize={{ sm: '2xl', lg: '3xl' }} pt="10">
-            why learn how to blog?
+            {description}
           </Text>
         </Flex>
         {/* Image Right */}
