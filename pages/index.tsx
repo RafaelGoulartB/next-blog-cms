@@ -1,4 +1,5 @@
 import React from 'react'
+import { NextPage } from 'next'
 import { Box } from '@chakra-ui/react'
 import HeadSection from '../components/head'
 import HighlightSection from '../components/highlight-card'
@@ -6,12 +7,21 @@ import LatestCard from '../components/latest-card'
 import ListPost from '../components/list-post'
 import PostCard from '../components/post-card'
 import PostCardContainer from '../components/post-card/container'
-import { posts } from '../data/constants'
 
-export default function Home() {
+import { posts } from '../data/constants'
+import { HeadContent, HeadContentProps } from '../data/head'
+
+interface Props {
+  head: HeadContentProps
+}
+
+const Home: NextPage<Props> = ({ head }) => {
   return (
     <Box as="main">
-      <HeadSection />
+      <HeadSection 
+        title={head.title}
+        description={head.description}
+      />
       <ListPost>
         <LatestCard
           id="1"
@@ -47,3 +57,12 @@ export default function Home() {
     </Box>
   )
 }
+
+
+Home.getInitialProps = async () => {
+
+  return { head: HeadContent }
+}
+
+
+export default Home
