@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PostDate from '../post-date'
 
-import { PostProps } from '../section/postListSection/types'
+import { PostSectionProps } from '../section/postListSection/types'
 
-const LatestCard: React.FC<PostProps> = ({
+const LatestCard: React.FC<PostSectionProps> = ({
   id,
   title,
   description,

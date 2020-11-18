@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PostDate from '../post-date'
 
-import { PostProps } from '../section/postListSection/types'
+import { PostSectionProps } from '../section/postListSection/types'
 
-const HighlightSection: React.FC<PostProps> = ({
+const HighlightSection: React.FC<PostSectionProps> = ({
   id,
   title,
   description,
