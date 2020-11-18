@@ -8,7 +8,7 @@ import PostCard from '../components/post-card'
 import PostCardContainer from '../components/post-card/container'
 
 import { PostProps, Posts } from '../data/posts'
-import { HeadContent, HeadContentProps } from '../data/head'
+import { HeadContentProps } from '../components/head/types'
 
 interface Props {
   head: HeadContentProps
@@ -57,7 +57,7 @@ const Home: NextPage<Props> = ({ head, posts }) => {
 
 export const getStaticProps: GetStaticProps = async context => {
   const postsJson = JSON.parse(JSON.stringify(Posts))
-  return { props: { head: HeadContent, posts: postsJson } }
+  return { props: { head: {}, posts: postsJson } }
 }
 
 export default Home
