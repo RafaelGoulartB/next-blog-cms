@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex } from '@chakra-ui/react'
 
-const PostCardContainer: React.FC = ({ children }) => {
+const RecentPostsContainer: React.FC = ({ children }) => {
   return (
     <Flex
       mt="12"
@@ -14,4 +14,4 @@ const PostCardContainer: React.FC = ({ children }) => {
   )
 }
 
-export default PostCardContainer
+export default RecentPostsContainer

@@ -6,7 +6,7 @@ import PostDate from '../post-date'
 
 import { PostSectionProps } from '../section/postListSection/types'
 
-const PostCard: React.FC<PostSectionProps> = ({
+const RecentPostCard: React.FC<PostSectionProps> = ({
   id,
   title,
   description,
@@ -58,4 +58,4 @@ const PostCard: React.FC<PostSectionProps> = ({
   )
 }
 
-export default PostCard
+export default RecentPostCard
