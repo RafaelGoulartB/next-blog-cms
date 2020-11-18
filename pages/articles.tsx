@@ -3,10 +3,11 @@ import { Box } from '@chakra-ui/react'
 import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
 
-import { PostProps, Posts } from '../data/posts'
+import { PostSectionProps } from '../components/section/postListSection/types'
+import { PostSectionFixtures } from '../components/section/postListSection/constants'
 
 interface Props {
-  posts: PostProps[]
+  posts: PostSectionProps[]
 }
 
 const About: NextPage<Props> = ({ posts }) => {
@@ -29,8 +30,9 @@ const About: NextPage<Props> = ({ posts }) => {
 }
 
 export const getStaticProps: GetStaticProps = async context => {
-  const postsJson = JSON.parse(JSON.stringify(Posts))
-  return { props: { posts: postsJson } }
+  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
+
+  return { props: { posts: postJson } }
 }
 
 export default About
