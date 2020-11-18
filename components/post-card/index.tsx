@@ -2,7 +2,9 @@ import React from 'react'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { monthNames, PostProps } from '../../data/posts'
+import PostDate from '../post-date'
+
+import { PostProps } from '../section/postListSection/types'
 
 const PostCard: React.FC<PostProps> = ({
   id,
@@ -39,11 +41,7 @@ const PostCard: React.FC<PostProps> = ({
         </Text>
 
         <Flex justifyContent="space-between">
-          <Text color="gray.300">{`${
-            monthNames[new Date(date).getMonth()]
-          } ${new Date(date).getDate()}th ${new Date(
-            date
-          ).getFullYear()}`}</Text>
+          <PostDate date={date} />
           <Link href={`/posts/${id}`}>
             <Text
               as="a"
