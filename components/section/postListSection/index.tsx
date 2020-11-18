@@ -14,8 +14,8 @@ interface Props {
 
 const PostListSection: NextPage<Props> = ({ posts = PostSectionFixtures }) => {
   const latestPost = posts[0]
-  const highlightPost = []
-  const recentPosts = []
+  const highlightPosts = posts.filter(post => post.highlight === true)
+  const recentPosts = posts.filter((post, index) => index !== 0 && index <= 3)
 
   return (
     <ListPost>
@@ -27,30 +27,27 @@ const PostListSection: NextPage<Props> = ({ posts = PostSectionFixtures }) => {
         date={latestPost.date}
       />
       <RecentPostsContainer>
-        {posts.map((post, index) => {
-          if (index > 0)
-            return (
-              <RecentPostCard
-                key={post.id}
-                id={post.id}
-                title={post.title}
-                description={post.description}
-                image={post.image}
-                date={post.date}
-              />
-            )
-          else if (index >= 4) return
-        })}
+        {recentPosts.map(post => (
+          <RecentPostCard
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            description={post.description}
+            image={post.image}
+            date={post.date}
+          />
+        ))}
       </RecentPostsContainer>
-      <HighlightSection
-        id="1"
-        title="What is Lorem Ipsum?"
-        description="It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution..."
-        image="/images/posts/highlight-post.png"
-        date={new Date()}
-      />
+      {highlightPosts.map(post => (
+        <HighlightSection
+          key={post.id}
+          id={post.id}
+          title={post.title}
+          description={post.description}
+          image={post.image}
+          date={post.date}
+        />
+      ))}
     </ListPost>
   )
 }
