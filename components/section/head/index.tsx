@@ -2,12 +2,12 @@ import { NextPage } from 'next'
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 import Image from 'next/image'
-import { HeadContentProps } from './types'
-import { HeadContent } from './constants'
+import { HeadSectionProps } from './types'
+import { HeadSectionFixtures } from './constants'
 
-const HeadSection: NextPage<HeadContentProps> = ({
-  title = HeadContent.title,
-  description = HeadContent.description
+const HeadSection: NextPage<HeadSectionProps> = ({
+  title = HeadSectionFixtures.title,
+  description = HeadSectionFixtures.description
 }) => {
   return (
     <Flex bg="gray.100" paddingX={{ sm: 10, lg: 32 }}>

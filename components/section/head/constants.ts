@@ -1,6 +1,6 @@
-import { HeadContentProps } from "./types";
+import { HeadSectionProps } from "./types";
 
-export const HeadContent: HeadContentProps = {
+export const HeadSectionFixtures: HeadSectionProps = {
   title: 'Make better coffee',
   description: 'why learn how to blog?'
 }
