@@ -4,4 +4,5 @@ export interface PostSectionProps {
   description: string
   image: any
   date: Date,
+  highlight?: boolean
 }
