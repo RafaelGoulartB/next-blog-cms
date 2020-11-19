@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://raw.githubusercontent.com/RafaelGoulartB/next-blog-cms/master/public/images/head.png" width="320"/>
+   <img src="https://raw.githubusercontent.com/RafaelGoulartB/next-blog-cms/master/public/images/coffee.png" width="150"/>
 </p>
  
 <h1 align="center">Blog with CMS</h1>
