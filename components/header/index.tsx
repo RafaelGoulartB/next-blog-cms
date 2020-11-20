@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router'
 import Hamburger from './hamburger'
 import Logo from './logo'
-import SocialLinks from '../../social-links'
+import SocialLinks from '../social-links'
 
 import { navLinks, socialLinks } from './constants'
 
