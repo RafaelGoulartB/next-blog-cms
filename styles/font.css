@@ -1,28 +1,20 @@
-/* inter-regular - latin */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/inter-v2-latin-regular.eot');
-  src: local(''),
-    url('/fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
+  src: local('Inter'),
     url('/fonts/inter-v2-latin-regular.woff2') format('woff2'),
     url('/fonts/inter-v2-latin-regular.woff') format('woff'),
-    url('/fonts/inter-v2-latin-regular.ttf') format('truetype'),
-    url('/fonts/inter-v2-latin-regular.svg#Inter') format('svg');
+    url('/fonts/inter-v2-latin-regular.ttf') format('truetype');
 }
-/* inter-700 - latin */
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/fonts/inter-v2-latin-700.eot');
-  src: local(''),
-    url('/fonts/inter-v2-latin-700.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/inter-v2-latin-700.woff2') format('woff2'),
+  src: local('Inter'), url('/fonts/inter-v2-latin-700.woff2') format('woff2'),
     url('/fonts/inter-v2-latin-700.woff') format('woff'),
-    url('/fonts/inter-v2-latin-700.ttf') format('truetype'),
-    url('/fonts/inter-v2-latin-700.svg#Inter') format('svg');
+    url('/fonts/inter-v2-latin-700.ttf') format('truetype');
 }
