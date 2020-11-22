@@ -24,7 +24,8 @@ const HeadSection: NextPage<HeadSectionProps> = ({
         {/* Text Left */}
         <Flex flexDir="column">
           <Heading fontSize={{ sm: '5xl', lg: '6xl' }} maxW="360px">
-            {title} <Image src="/images/coffee.png" width={70} height={68} />
+            {title}{' '}
+            <Image src="/images/coffee.png" width={70} height={68} priority />
           </Heading>
           <Text color="gray.500" fontSize={{ sm: '2xl', lg: '3xl' }} pt="10">
             {description}
