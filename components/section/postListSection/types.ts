@@ -1,8 +1,8 @@
 export interface PostSectionProps {
-  id: string,
+  id: string
   title: string
   description: string
   image: any
-  date: Date,
+  date: Date
   highlight?: boolean
 }
