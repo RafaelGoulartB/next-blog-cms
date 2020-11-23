@@ -30,7 +30,7 @@ const Post: React.FC<Props> = ({ post }) => {
       <Box
         position="relative"
         w="100%"
-        h={{ sm: '20vh', md: '30vh', lg: '380px', xl: '40vh' }}
+        h={{ sm: '30vh', md: '30vh', lg: '380px', xl: '40vh' }}
       >
         <Image src={post.image} layout="fill" />
       </Box>
@@ -45,6 +45,8 @@ const Post: React.FC<Props> = ({ post }) => {
         boxSizing="border-box"
       >
         <HeadingPost title={post.title} author={post.author} date={post.date} />
+
+        <Text>{post.text}</Text>
       </Flex>
     </Flex>
   )
