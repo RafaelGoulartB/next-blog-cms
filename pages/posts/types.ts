@@ -6,4 +6,5 @@ export interface PostProps {
   image: any
   date: Date
   highlight?: boolean
+  author: string
 }

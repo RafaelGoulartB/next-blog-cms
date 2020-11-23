@@ -8,7 +8,8 @@ export const PostFixtures: PostProps[] = [
     text: 'Test Test',
     image: '/images/posts/latest-post.png',
     date: new Date(),
-    highlight: false
+    highlight: false,
+    author: 'Rafael'
   },
   {
     id: '1',
@@ -17,7 +18,8 @@ export const PostFixtures: PostProps[] = [
     text: 'Test Test',
     image: '/images/posts/post-1.png',
     date: new Date(),
-    highlight: false
+    highlight: false,
+    author: 'Rafael'
   },
   {
     id: '2',
@@ -26,7 +28,8 @@ export const PostFixtures: PostProps[] = [
     text: 'Test Test',
     image: '/images/posts/post-2.png',
     date: new Date(),
-    highlight: false
+    highlight: false,
+    author: 'Rafael'
   },
   {
     id: '3',
@@ -35,7 +38,8 @@ export const PostFixtures: PostProps[] = [
     image: '/images/posts/post-3.png',
     text: 'Test Test',
     date: new Date(),
-    highlight: false
+    highlight: false,
+    author: 'Rafael'
   },
   {
     id: '4',
@@ -44,7 +48,8 @@ export const PostFixtures: PostProps[] = [
     text: 'Test Test',
     image: '/images/posts/highlight-post.png',
     date: new Date(),
-    highlight: true
+    highlight: true,
+    author: 'Rafael'
   }
 ]
 
