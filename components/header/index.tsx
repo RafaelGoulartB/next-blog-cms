@@ -25,7 +25,7 @@ const MenuItems: React.FC<MenuItem> = ({ children, link, onClick }) => {
         color="black"
         onClick={onClick || undefined}
         mt={{ sm: '6', lg: '0' }}
-        mr="9"
+        mr={{ sm: '0', lg: '9' }}
         _hover={{ cursor: 'pointer' }}
       >
         {children}
