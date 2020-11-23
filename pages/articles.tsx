@@ -10,6 +10,12 @@ interface Props {
   posts: PostSectionProps[]
 }
 
+export const getStaticProps: GetStaticProps = async context => {
+  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
+
+  return { props: { posts: postJson } }
+}
+
 const About: NextPage<Props> = ({ posts }) => {
   return (
     <Box as="main">
@@ -27,12 +33,6 @@ const About: NextPage<Props> = ({ posts }) => {
       </ListPost>
     </Box>
   )
-}
-
-export const getStaticProps: GetStaticProps = async context => {
-  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
-
-  return { props: { posts: postJson } }
 }
 
 export default About
