@@ -25,7 +25,7 @@ const HighlightSection: React.FC<PostSectionProps> = ({
       borderRadius="sm"
     >
       {/* Image */}
-      <Flex width={{ sm: '100%', lg: '60%' }} position="relative">
+      <Flex width={{ sm: '100%', lg: '55%' }} position="relative">
         <Image src={image} alt="Post Image" layout="fill" quality={100} />
       </Flex>
 
@@ -36,7 +36,7 @@ const HighlightSection: React.FC<PostSectionProps> = ({
         py="24"
         pl={{ sm: '8', lg: '14' }}
         pr={{ sm: '8', lg: '20' }}
-        width={{ sm: '100%', lg: '40%' }}
+        width={{ sm: '100%', lg: '45%' }}
       >
         <Heading as="h3" fontSize="4xl" color="gray.800">
           {title}
