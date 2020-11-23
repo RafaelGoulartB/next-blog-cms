@@ -9,6 +9,12 @@ interface Props {
   post: PostProps
 }
 
+export async function getStaticProps({ params }) {
+  const post = JSON.parse(JSON.stringify(PostFixtures[params.id]))
+
+  return { props: { post } }
+}
+
 const Post: React.FC<Props> = ({ post }) => {
   return (
     <Box as="main">
@@ -28,12 +34,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: paths,
     fallback: false
   }
-}
-
-export async function getStaticProps({ params }) {
-  const post = JSON.parse(JSON.stringify(PostFixtures[params.id]))
-
-  return { props: { post } }
 }
 
 export default Post

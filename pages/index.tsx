@@ -12,6 +12,12 @@ interface Props {
   posts: PostSectionProps[]
 }
 
+export const getStaticProps: GetStaticProps = async () => {
+  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
+
+  return { props: { head: {}, posts: postJson } }
+}
+
 const Home: NextPage<Props> = ({ head, posts }) => {
   return (
     <Box as="main">
@@ -19,12 +25,6 @@ const Home: NextPage<Props> = ({ head, posts }) => {
       <PostListSection posts={posts} />
     </Box>
   )
-}
-
-export const getStaticProps: GetStaticProps = async context => {
-  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
-
-  return { props: { head: {}, posts: postJson } }
 }
 
 export default Home
