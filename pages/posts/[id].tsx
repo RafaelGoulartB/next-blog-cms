@@ -1,9 +1,11 @@
 import React from 'react'
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import { GetStaticPaths } from 'next'
 
 import { PostFixtures } from './constants'
 import { PostProps } from './types'
+import Image from 'next/image'
+import HeadingPost from '../../components/heading-post'
 
 interface Props {
   post: PostProps
@@ -17,9 +19,34 @@ export async function getStaticProps({ params }) {
 
 const Post: React.FC<Props> = ({ post }) => {
   return (
-    <Box as="main">
-      <Text>Post {post.id}</Text>
-    </Box>
+    <Flex
+      as="main"
+      flexDir="column"
+      maxW="1440px"
+      mx="auto"
+      paddingX={{ base: 10, sm: 10, lg: 20 }}
+    >
+      {/* Image */}
+      <Box
+        position="relative"
+        w="100%"
+        h={{ sm: '20vh', md: '30vh', lg: '380px', xl: '40vh' }}
+      >
+        <Image src={post.image} layout="fill" />
+      </Box>
+
+      <Flex
+        mt="12"
+        flexDir="column"
+        maxW="1200px"
+        w="100%"
+        mx="auto"
+        paddingX={{ sm: '16', lg: '34' }}
+        boxSizing="border-box"
+      >
+        <HeadingPost title={post.title} author={post.author} date={post.date} />
+      </Flex>
+    </Flex>
   )
 }
 
