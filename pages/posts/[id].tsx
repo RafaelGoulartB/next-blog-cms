@@ -41,7 +41,7 @@ const Post: React.FC<Props> = ({ post }) => {
         maxW="1200px"
         w="100%"
         mx="auto"
-        paddingX={{ sm: '0', lg: '34' }}
+        paddingX={{ sm: '0', md: '16', lg: '34' }}
         boxSizing="border-box"
       >
         <HeadingPost title={post.title} author={post.author} date={post.date} />
