@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PostDate from '../post-date'
 
-import { PostSectionProps } from '../section/postListSection/types'
+import { PostProps } from '../../pages/posts/types'
 
-const LatestCard: React.FC<PostSectionProps> = ({
+const LatestCard: React.FC<PostProps> = ({
   id,
   title,
   description,
@@ -31,7 +31,7 @@ const LatestCard: React.FC<PostSectionProps> = ({
     >
       {/* Image */}
       <Flex width={{ sm: '100%', lg: '40%' }} position="relative">
-        <Image src={image} alt="Post Image" layout="fill" quality={100} />
+        <Image src={image.url} alt={title} layout="fill" quality={100} />
       </Flex>
 
       {/* Text */}

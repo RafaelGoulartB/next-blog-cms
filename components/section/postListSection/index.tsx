@@ -5,14 +5,14 @@ import ListPost from '../../list-post'
 import RecentPostCard from '../../recent-card'
 import RecentPostsContainer from '../../recent-card/container'
 
-import { PostSectionFixtures } from './constants'
-import { PostSectionProps } from './types'
+import { PostProps } from '../../../pages/posts/types'
+import { PostFixtures } from '../../../pages/posts/constants'
 
 interface Props {
-  posts: PostSectionProps[]
+  posts: PostProps[]
 }
 
-const PostListSection: NextPage<Props> = ({ posts = PostSectionFixtures }) => {
+const PostListSection: NextPage<Props> = ({ posts = PostFixtures }) => {
   const latestPost = posts[0]
   const highlightPosts = posts.filter(post => post.highlight === true)
   const recentPosts = posts.filter((post, index) => index !== 0 && index <= 3)
