@@ -27,7 +27,8 @@ const About: NextPage<Props> = ({ posts }) => {
             title={post.title}
             description={post.description}
             image={post.image}
-            date={post.date}
+            createdAt={post.createdAt}
+            author={post.author}
           />
         ))}
       </ListPost>
