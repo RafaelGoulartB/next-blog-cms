@@ -3,17 +3,18 @@ import { Box } from '@chakra-ui/react'
 import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
 
-import { PostSectionProps } from '../components/section/postListSection/types'
-import { PostSectionFixtures } from '../components/section/postListSection/constants'
+import { PostProps } from './posts/types'
+import graphQLClient from '../config/graphql-client'
+import { getAllPosts } from '../queries/posts'
 
 interface Props {
-  posts: PostSectionProps[]
+  posts: PostProps[]
 }
 
-export const getStaticProps: GetStaticProps = async context => {
-  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
+export const getStaticProps: GetStaticProps = async () => {
+  const { posts } = await graphQLClient.request(getAllPosts)
 
-  return { props: { posts: postJson } }
+  return { props: { posts } }
 }
 
 const About: NextPage<Props> = ({ posts }) => {
@@ -27,7 +28,8 @@ const About: NextPage<Props> = ({ posts }) => {
             title={post.title}
             description={post.description}
             image={post.image}
-            date={post.date}
+            createdAt={post.createdAt}
+            author={post.author}
           />
         ))}
       </ListPost>

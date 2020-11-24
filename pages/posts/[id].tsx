@@ -1,23 +1,29 @@
 import React from 'react'
-import { Box, Flex, Heading, Text } from '@chakra-ui/react'
-import { GetStaticPaths } from 'next'
+import { Box, Flex, Text } from '@chakra-ui/react'
+import HeadingPost from '../../components/heading-post'
+import Image from 'next/image'
+import graphQLClient from '../../config/graphql-client'
+import { getAllPosts, getPostById } from '../../queries/posts'
 
+import { GetStaticPaths } from 'next'
 import { PostFixtures } from './constants'
 import { PostProps } from './types'
-import Image from 'next/image'
-import HeadingPost from '../../components/heading-post'
 
 interface Props {
   post: PostProps
 }
 
 export async function getStaticProps({ params }) {
-  const post = JSON.parse(JSON.stringify(PostFixtures[params.id]))
+  const variables = {
+    id: params.id
+  }
+
+  const { post } = await graphQLClient.request(getPostById, variables)
 
   return { props: { post } }
 }
 
-const Post: React.FC<Props> = ({ post }) => {
+const Post: React.FC<Props> = ({ post = PostFixtures[0] }) => {
   return (
     <Flex
       as="main"
@@ -32,7 +38,7 @@ const Post: React.FC<Props> = ({ post }) => {
         w="100%"
         h={{ sm: '30vh', md: '30vh', lg: '380px', xl: '40vh' }}
       >
-        <Image src={post.image} layout="fill" />
+        <Image src={post.image.url} layout="fill" />
       </Box>
 
       <Flex
@@ -44,7 +50,11 @@ const Post: React.FC<Props> = ({ post }) => {
         paddingX={{ sm: '0', md: '16', lg: '34' }}
         boxSizing="border-box"
       >
-        <HeadingPost title={post.title} author={post.author} date={post.date} />
+        <HeadingPost
+          title={post.title}
+          author={post.author.name}
+          date={post.createdAt}
+        />
 
         <Text>{post.text}</Text>
       </Flex>
@@ -53,9 +63,9 @@ const Post: React.FC<Props> = ({ post }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const postJson = JSON.parse(JSON.stringify(PostFixtures))
+  const { posts } = await graphQLClient.request(getAllPosts)
 
-  const paths = postJson.map(post => ({
+  const paths = posts.map(post => ({
     params: { id: post.id }
   }))
 

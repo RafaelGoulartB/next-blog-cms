@@ -1,6 +1,6 @@
 import { Text, TextProps } from '@chakra-ui/react'
 import { NextPage } from 'next'
-import { monthNames } from '../section/postListSection/constants'
+import { monthNames } from '../../pages/posts/constants'
 
 interface Props {
   date: any

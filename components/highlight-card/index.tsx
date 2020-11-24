@@ -4,14 +4,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PostDate from '../post-date'
 
-import { PostSectionProps } from '../section/postListSection/types'
+import { PostProps } from '../../pages/posts/types'
 
-const HighlightSection: React.FC<PostSectionProps> = ({
+const HighlightSection: React.FC<PostProps> = ({
   id,
   title,
   description,
   image,
-  date
+  createdAt
 }) => {
   return (
     <Flex
@@ -26,7 +26,7 @@ const HighlightSection: React.FC<PostSectionProps> = ({
     >
       {/* Image */}
       <Flex width={{ sm: '100%', lg: '55%' }} position="relative">
-        <Image src={image} alt="Post Image" layout="fill" quality={100} />
+        <Image src={image.url} alt={title} layout="fill" quality={100} />
       </Flex>
 
       {/* Text */}
@@ -46,7 +46,7 @@ const HighlightSection: React.FC<PostSectionProps> = ({
         </Text>
 
         <Flex justifyContent="space-between">
-          <PostDate date={date} />
+          <PostDate date={createdAt} />
           <Link href={`/posts/${id}`}>
             <Text
               as="a"
