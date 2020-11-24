@@ -25,3 +25,24 @@ export const getAllPostsPaths = gql`
     }
   }
 `
+
+export const getPostById = gql`  
+  query post($id: ID!) {
+    post(where: { id: $id }) {
+      id
+      title
+      description
+      text
+      image {
+        url
+        width
+        height
+      }
+      author {
+        name
+      }
+      createdAt
+      highlight
+    }
+  }
+`
