@@ -13,7 +13,7 @@ interface Props {
 }
 
 const PostListSection: NextPage<Props> = ({ posts = PostFixtures }) => {
-  const latestPost = posts[0]
+  const [latestPost] = posts.slice(-1)
   const highlightPosts = posts.filter(post => post.highlight === true)
   const recentPosts = posts.filter((post, index) => index !== 0 && index <= 3)
 

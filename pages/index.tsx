@@ -16,7 +16,7 @@ interface Props {
 export const getStaticProps: GetStaticProps = async () => {
   const { posts } = await graphQLClient.request(getAllPosts)
 
-  return { props: { head: {}, posts: posts } }
+  return { props: { head: {}, posts } }
 }
 
 const Home: NextPage<Props> = ({ head, posts }) => {
