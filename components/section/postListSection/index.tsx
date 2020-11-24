@@ -24,7 +24,8 @@ const PostListSection: NextPage<Props> = ({ posts = PostSectionFixtures }) => {
         title={latestPost.title}
         description={latestPost.description}
         image={latestPost.image}
-        date={latestPost.date}
+        createdAt={latestPost.createdAt}
+        author={latestPost.author}
       />
       <RecentPostsContainer>
         {recentPosts.map(post => (
@@ -34,7 +35,8 @@ const PostListSection: NextPage<Props> = ({ posts = PostSectionFixtures }) => {
             title={post.title}
             description={post.description}
             image={post.image}
-            date={post.date}
+            createdAt={post.createdAt}
+            author={post.author}
           />
         ))}
       </RecentPostsContainer>
@@ -45,7 +47,8 @@ const PostListSection: NextPage<Props> = ({ posts = PostSectionFixtures }) => {
           title={post.title}
           description={post.description}
           image={post.image}
-          date={post.date}
+          createdAt={post.createdAt}
+          author={post.author}
         />
       ))}
     </ListPost>

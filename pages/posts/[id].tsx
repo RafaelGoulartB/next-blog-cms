@@ -44,7 +44,11 @@ const Post: React.FC<Props> = ({ post }) => {
         paddingX={{ sm: '0', md: '16', lg: '34' }}
         boxSizing="border-box"
       >
-        <HeadingPost title={post.title} author={post.author} date={post.date} />
+        <HeadingPost
+          title={post.title}
+          author={post.author}
+          date={post.createdAt}
+        />
 
         <Text>{post.text}</Text>
       </Flex>

@@ -11,7 +11,7 @@ const LatestCard: React.FC<PostSectionProps> = ({
   title,
   description,
   image,
-  date
+  createdAt
 }) => {
   return (
     <Flex
@@ -50,7 +50,7 @@ const LatestCard: React.FC<PostSectionProps> = ({
         </Text>
 
         <Flex justifyContent="space-between">
-          <PostDate date={date} />
+          <PostDate date={createdAt} />
           <Link href={`/posts/${id}`}>
             <Text
               as="a"
