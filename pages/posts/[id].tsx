@@ -3,7 +3,7 @@ import { Box, Flex, Text } from '@chakra-ui/react'
 import HeadingPost from '../../components/heading-post'
 import Image from 'next/image'
 import graphQLClient from '../../config/graphql-client'
-import { getAllPosts } from '../../queries/posts'
+import { getAllPosts, getPostById } from '../../queries/posts'
 
 import { GetStaticPaths } from 'next'
 import { PostFixtures } from './constants'
@@ -14,7 +14,13 @@ interface Props {
 }
 
 export async function getStaticProps({ params }) {
-  return { props: {} }
+  const variables = {
+    id: params.id
+  }
+
+  const { post } = await graphQLClient.request(getPostById, variables)
+
+  return { props: { post } }
 }
 
 const Post: React.FC<Props> = ({ post = PostFixtures[0] }) => {
@@ -46,7 +52,7 @@ const Post: React.FC<Props> = ({ post = PostFixtures[0] }) => {
       >
         <HeadingPost
           title={post.title}
-          author={post.author}
+          author={post.author.name}
           date={post.createdAt}
         />
 
