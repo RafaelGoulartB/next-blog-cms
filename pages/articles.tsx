@@ -3,15 +3,15 @@ import { Box } from '@chakra-ui/react'
 import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
 
-import { PostSectionProps } from '../components/section/postListSection/types'
-import { PostSectionFixtures } from '../components/section/postListSection/constants'
+import { PostProps } from './posts/types'
+import { PostFixtures } from './posts/constants'
 
 interface Props {
-  posts: PostSectionProps[]
+  posts: PostProps[]
 }
 
-export const getStaticProps: GetStaticProps = async context => {
-  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
+export const getStaticProps: GetStaticProps = async () => {
+  const postJson = JSON.parse(JSON.stringify(PostFixtures))
 
   return { props: { posts: postJson } }
 }
