@@ -4,16 +4,17 @@ import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
 
 import { PostProps } from './posts/types'
-import { PostFixtures } from './posts/constants'
+import graphQLClient from '../config/graphql-client'
+import { getAllPosts } from '../queries/posts'
 
 interface Props {
   posts: PostProps[]
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postJson = JSON.parse(JSON.stringify(PostFixtures))
+  const { posts } = await graphQLClient.request(getAllPosts)
 
-  return { props: { posts: postJson } }
+  return { props: { posts } }
 }
 
 const About: NextPage<Props> = ({ posts }) => {
