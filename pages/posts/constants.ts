@@ -10,7 +10,7 @@ export const PostFixtures: PostProps[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     highlight: false,
-    author: 'Rafael'
+    author: { name: 'Rafael' }
   },
   {
     id: '1',
@@ -21,7 +21,8 @@ export const PostFixtures: PostProps[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     highlight: false,
-    author: 'Rafael'
+    author: { name: 'Rafael' }
+
   },
   {
     id: '2',
@@ -32,7 +33,7 @@ export const PostFixtures: PostProps[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     highlight: false,
-    author: 'Rafael'
+    author: { name: 'Rafael' }
   },
   {
     id: '3',
@@ -43,7 +44,7 @@ export const PostFixtures: PostProps[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     highlight: false,
-    author: 'Rafael'
+    author: { name: 'Rafael' }
   },
   {
     id: '4',
@@ -54,7 +55,7 @@ export const PostFixtures: PostProps[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     highlight: true,
-    author: 'Rafael'
+    author: { name: 'Rafael' }
   }
 ]
 

@@ -11,5 +11,7 @@ export interface PostProps {
   createdAt: Date
   updatedAt?: Date
   highlight?: boolean
-  author: string
+  author?: {
+    name: string
+  }
 }
