@@ -1,21 +1,22 @@
 import { GetStaticProps, NextPage } from 'next'
+import graphQLClient from '../config/graphql-client'
 import { Box } from '@chakra-ui/react'
 import HeadSection from '../components/section/head'
 import PostListSection from '../components/section/postListSection'
+import { getAllPosts } from '../queries/posts'
 
 import { HeadSectionProps } from '../components/section/head/types'
-import { PostSectionProps } from '../components/section/postListSection/types'
-import { PostSectionFixtures } from '../components/section/postListSection/constants'
+import { PostProps } from './posts/types'
 
 interface Props {
   head: HeadSectionProps
-  posts: PostSectionProps[]
+  posts: PostProps[]
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postJson = JSON.parse(JSON.stringify(PostSectionFixtures))
+  const { posts } = await graphQLClient.request(getAllPosts)
 
-  return { props: { head: {}, posts: postJson } }
+  return { props: { head: {}, posts: posts } }
 }
 
 const Home: NextPage<Props> = ({ head, posts }) => {
