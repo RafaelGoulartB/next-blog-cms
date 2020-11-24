@@ -4,6 +4,8 @@ import HeadingPost from '../../components/heading-post'
 import Image from 'next/image'
 import graphQLClient from '../../config/graphql-client'
 import { getAllPosts, getPostById } from '../../queries/posts'
+import matter from 'gray-matter'
+import ReactMarkdown from 'react-markdown'
 
 import { GetStaticPaths } from 'next'
 import { PostFixtures } from './constants'
@@ -19,6 +21,8 @@ export async function getStaticProps({ params }) {
   }
 
   const { post } = await graphQLClient.request(getPostById, variables)
+
+  post.text = matter(post.text).content
 
   return { props: { post } }
 }
@@ -56,7 +60,7 @@ const Post: React.FC<Props> = ({ post = PostFixtures[0] }) => {
           date={post.createdAt}
         />
 
-        <Text>{post.text}</Text>
+        <ReactMarkdown source={post.text} />
       </Flex>
     </Flex>
   )
