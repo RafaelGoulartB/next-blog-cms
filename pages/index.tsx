@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react'
 import HeadSection from '../components/section/head'
 import PostListSection from '../components/section/postListSection'
 import { getAllPosts } from '../queries/posts'
+import { getHeadSection } from '../queries/head'
 
 import { HeadSectionProps } from '../components/section/head/types'
 import { PostProps } from './posts/types'
@@ -15,8 +16,9 @@ interface Props {
 
 export const getStaticProps: GetStaticProps = async () => {
   const { posts } = await graphQLClient.request(getAllPosts)
+  const { headSections } = await graphQLClient.request(getHeadSection)
 
-  return { props: { head: {}, posts } }
+  return { props: { head: headSections[0], posts } }
 }
 
 const Home: NextPage<Props> = ({ head, posts }) => {
