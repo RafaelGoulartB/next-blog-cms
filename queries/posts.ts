@@ -14,7 +14,14 @@ export const getAllPosts = gql`
       }
       createdAt
       highlight
-      
+    }
+  }
+`
+
+export const getAllPostsPaths = gql`  
+  query PostsPath() {
+    posts {
+      id
     }
   }
 `
