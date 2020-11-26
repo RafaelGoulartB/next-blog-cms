@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
-import { Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import ListPost from '../components/list-post'
 import LatestCard from '../components/latest-card'
 
@@ -41,6 +41,12 @@ const Article: NextPage<Props> = ({ posts }) => {
   return (
     <Box as="main">
       <ListPost>
+        {filteredPosts.length === 0 && (
+          <Text textAlign="center" fontWeight="bold" fontSize="3xl" my="40">
+            Sorry. Post not founded.
+          </Text>
+        )}
+
         {filteredPosts.map(post => (
           <LatestCard
             key={post.id}
