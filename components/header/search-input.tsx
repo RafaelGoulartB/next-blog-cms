@@ -4,8 +4,7 @@ import {
   FormControl,
   Input,
   InputGroup,
-  InputLeftElement,
-  InputRightElement
+  InputLeftElement
 } from '@chakra-ui/react'
 import { useRouter } from 'next/dist/client/router'
 
