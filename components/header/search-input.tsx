@@ -52,7 +52,6 @@ const SearchInput: React.FC<Props> = ({
             size="sm"
             value={search}
             onChange={event => setSearch(event.target.value)}
-            isLoading={isSearchLoading}
           />
         </InputGroup>
       </FormControl>
