@@ -22,10 +22,11 @@ export const getStaticProps: GetStaticProps = async () => {
 const Article: NextPage<Props> = ({ posts }) => {
   const router = useRouter()
   const searchQuery = router.query.s
-  const searchTerm = String(searchQuery).toLowerCase().trim()
   let filteredPosts = posts
 
-  if (searchTerm) {
+  if (searchQuery) {
+    const searchTerm = String(searchQuery).toLowerCase().trim()
+
     filteredPosts = posts.filter(post => {
       const title = post.title.toLowerCase()
       const description = post.description.toLowerCase()
