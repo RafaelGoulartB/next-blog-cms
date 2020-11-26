@@ -25,7 +25,9 @@ const Article: NextPage<Props> = ({ posts }) => {
 
   if (searchQuery) {
     const searchTerms = String(searchQuery).toLowerCase().trim()
-    const searchTermsArray = searchTerms.split(' ')
+    const searchTermsArray = searchTerms
+      .split(' ')
+      .filter(term => term.length > 2)
 
     filteredPosts = posts.filter(post => {
       const title = post.title.toLowerCase()
