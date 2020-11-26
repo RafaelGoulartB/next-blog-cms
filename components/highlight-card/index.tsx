@@ -16,7 +16,7 @@ const HighlightSection: React.FC<PostProps> = ({
   return (
     <Flex
       as="article"
-      minH={{ base: 'none', xl: '720px' }}
+      minH={{ base: 'none', xl: '580px' }}
       background="#f7fafc"
       flexDir={{ sm: 'column', lg: 'row-reverse' }}
       boxSizing="border-box"
