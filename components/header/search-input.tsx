@@ -28,7 +28,8 @@ const SearchInput: React.FC<Props> = ({
 
       <FormControl
         as="form"
-        mr="16"
+        mr={{ sm: 'auto', lg: '16' }}
+        ml={{ sm: 'auto', lg: '0' }}
         onSubmit={event => {
           event.preventDefault()
           setIsSearchLoading(true)
