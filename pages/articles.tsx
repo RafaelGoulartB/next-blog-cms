@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { posts } }
 }
 
-const About: NextPage<Props> = ({ posts }) => {
+const Article: NextPage<Props> = ({ posts }) => {
   return (
     <Box as="main">
       <ListPost>
@@ -37,4 +37,4 @@ const About: NextPage<Props> = ({ posts }) => {
   )
 }
 
-export default About
+export default Article
