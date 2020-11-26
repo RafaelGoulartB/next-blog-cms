@@ -54,7 +54,9 @@ const Header: React.FC = props => {
       paddingY={{ sm: '8', lg: '10' }}
       backgroundColor="white"
       zIndex={999}
-      boxShadow={show ? '0px 5px 4px rgba(221, 221, 221, 0.25)' : 'none'}
+      boxShadow={{
+        sm: show ? '0px 5px 4px rgba(221, 221, 221, 0.25)' : 'none'
+      }}
       {...props}
     >
       <Logo />
