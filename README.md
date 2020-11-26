@@ -22,7 +22,7 @@
   <img alt="" src="https://img.shields.io/github/repo-size/RafaelGoulartB/blog-cms?color=fe4d3b" />
 </p>
 
-> Blog made with Next.js and GraphCMS
+> Blog using GraphCMS to manege content and posts. Made with Next.js, Markdown and Chakra UI.
 
 <div align="center">
   <sub>The Blog project. Built with ❤︎ by
