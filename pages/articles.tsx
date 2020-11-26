@@ -6,6 +6,8 @@ import LatestCard from '../components/latest-card'
 import { PostProps } from './posts/types'
 import graphQLClient from '../config/graphql-client'
 import { getAllPosts } from '../queries/posts'
+import { useRouter } from 'next/dist/client/router'
+import { useEffect } from 'react'
 
 interface Props {
   posts: PostProps[]
@@ -18,10 +20,27 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Article: NextPage<Props> = ({ posts }) => {
+  const router = useRouter()
+  const searchQuery = router.query.s
+  const searchTerm = String(searchQuery).toLowerCase().trim()
+  let filteredPosts = posts
+
+  if (searchTerm) {
+    filteredPosts = posts.filter(post => {
+      const title = post.title.toLowerCase()
+      const description = post.description.toLowerCase()
+
+      const includesInTitle = title.includes(searchTerm)
+      const includesInDescription = description.includes(searchTerm)
+
+      if (includesInTitle || includesInDescription) return true
+    })
+  }
+
   return (
     <Box as="main">
       <ListPost>
-        {posts.map(post => (
+        {filteredPosts.map(post => (
           <LatestCard
             key={post.id}
             id={post.id}
