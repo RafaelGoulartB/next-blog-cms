@@ -25,14 +25,22 @@ const Article: NextPage<Props> = ({ posts }) => {
   let filteredPosts = posts
 
   if (searchQuery) {
-    const searchTerm = String(searchQuery).toLowerCase().trim()
+    const searchTerms = String(searchQuery).toLowerCase().trim()
+    const searchTermsArray = searchTerms.split(' ')
 
     filteredPosts = posts.filter(post => {
       const title = post.title.toLowerCase()
       const description = post.description.toLowerCase()
 
-      const includesInTitle = title.includes(searchTerm)
-      const includesInDescription = description.includes(searchTerm)
+      let includesInTitle
+      let includesInDescription
+
+      searchTermsArray.forEach(searchTerm => {
+        includesInTitle = title.includes(searchTerm)
+        includesInDescription = description.includes(searchTerm)
+
+        return includesInTitle || includesInDescription
+      })
 
       if (includesInTitle || includesInDescription) return true
     })
