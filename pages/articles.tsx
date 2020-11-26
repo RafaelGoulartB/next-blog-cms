@@ -7,7 +7,6 @@ import { PostProps } from './posts/types'
 import graphQLClient from '../config/graphql-client'
 import { getAllPosts } from '../queries/posts'
 import { useRouter } from 'next/dist/client/router'
-import { useEffect } from 'react'
 
 interface Props {
   posts: PostProps[]
