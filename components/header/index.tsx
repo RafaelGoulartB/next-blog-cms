@@ -5,6 +5,7 @@ import { useRouter } from 'next/dist/client/router'
 import Hamburger from './hamburger'
 import Logo from './logo'
 import SocialLinks from '../social-links'
+import SearchInput from './search-input'
 
 import { navLinks, socialLinks } from './constants'
 
@@ -38,6 +39,9 @@ const Header: React.FC = props => {
   const [show, setShow] = React.useState(false)
   const handleToggle = () => setShow(!show)
 
+  const [search, setSearch] = React.useState('')
+  const [isSearchLoading, setIsSearchLoading] = React.useState(false)
+
   return (
     <Flex
       as="nav"
@@ -50,6 +54,7 @@ const Header: React.FC = props => {
       paddingY={{ sm: '8', lg: '10' }}
       backgroundColor="white"
       zIndex={999}
+      boxShadow={show ? '0px 5px 4px rgba(221, 221, 221, 0.25)' : 'none'}
       {...props}
     >
       <Logo />
@@ -66,6 +71,13 @@ const Header: React.FC = props => {
         width={{ sm: 'full', lg: 'auto' }}
         marginTop={{ sm: '20px', lg: '0' }}
       >
+        <SearchInput
+          search={search}
+          setSearch={setSearch}
+          isSearchLoading={isSearchLoading}
+          setIsSearchLoading={setIsSearchLoading}
+        />
+
         {navLinks.map(item => (
           <MenuItems key={item.label} onClick={handleToggle} link={item.link}>
             {item.label}
