@@ -42,7 +42,7 @@
 
 # :pushpin: Table of Contents
 
-* [Demo Website](#eyes-demo-website)
+* [Website](#eyes-website)
 * [Technologies](#computer-technologies)
 * [Features](#rocket-features)
 * [How to run](#construction_worker-how-to-run)
@@ -57,17 +57,16 @@
     </a>
 </p>
 
-# :eyes: Demo Website
-The demo website can be missing some features, clone and run the project to a full experience. <br>
-👉  demo: https://blogcms.vercel.app/
+# :eyes: Website
+👉 https://blogcms.vercel.app/
 
 # :computer: Technologies
 This project was made using the follow technologies:
 
-* [Next.js](https://nextjs.org/) - To SSR and routes control
-* [Chakra UI](https://chakra-ui.com/docs/getting-started)    
-* [GraphCMS](https://graphcms.com/) - To content management
-* [Vercel](https://vercel.com/) - To deploy website     
+* [Next.js](https://nextjs.org/)     
+* [Chakra UI](https://chakra-ui.com/docs/getting-started)      
+* [GraphCMS](https://graphcms.com/)    
+* [Vercel](https://vercel.com/)     
 
 # :rocket: Features
 
