@@ -7,7 +7,7 @@ import { getAllPosts, getPostById } from '../../queries/posts'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
-import { GetStaticPaths } from 'next'
+import { GetStaticPaths, NextPage } from 'next'
 import { PostFixtures } from './constants'
 import { PostProps } from './types'
 
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
   return { props: { post } }
 }
 
-const Post: React.FC<Props> = ({ post = PostFixtures[0] }) => {
+const Post: NextPage<Props> = ({ post = PostFixtures[0] }) => {
   return (
     <Flex
       as="main"

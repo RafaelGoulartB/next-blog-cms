@@ -8,8 +8,9 @@ import Footer from '../components/footer'
 
 import seoConfig from '../config/seo'
 import '../styles/font.css'
+import { NextPage } from 'next'
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
