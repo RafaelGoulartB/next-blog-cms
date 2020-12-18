@@ -77,7 +77,7 @@ This project was made using the follow technologies:
 - Pagination
   
 # :construction_worker: How to run
-**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first.**
+**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then**
 
 ### Rename env file
 Rename `.env-exemple` to `.env`
