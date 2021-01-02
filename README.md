@@ -100,7 +100,7 @@ Feel free to **file a new issue** with a respective title and description on the
 ---
 
 
-[⬆ Back to the top](#pushpin-table-of-contents)
+[⬆ Back to Top](#pushpin-table-of-contents)
 
 
 # :tada: Contributing
