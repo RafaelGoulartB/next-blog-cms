@@ -7,10 +7,10 @@ assignees: ''
 
 ---
 
-**Description**
+## Description
 Add a clear description of the possible new feature.
 
-**Tasks**
+## Tasks
 - [ ] ....
 - [ ] ....
 
