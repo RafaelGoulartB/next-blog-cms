@@ -1,4 +1,4 @@
-import { gql } from "graphql-request";
+import { gql } from 'graphql-request'
 
 export const getAllPosts = gql`  
   query Posts() {
@@ -26,7 +26,7 @@ export const getAllPostsPaths = gql`
   }
 `
 
-export const getPostById = gql`  
+export const getPostById = gql`
   query post($id: ID!) {
     post(where: { id: $id }) {
       id

@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
-import React from 'react'
 import Image from 'next/image'
 import { HeadSectionProps } from './types'
 import { HeadSectionFixtures } from './constants'

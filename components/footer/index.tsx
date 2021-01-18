@@ -1,4 +1,3 @@
-import React from 'react'
 import { Divider, Flex, Text, Box } from '@chakra-ui/react'
 import { socialLinks } from '../header/constants'
 import SocialLinks from '../social-links'

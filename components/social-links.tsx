@@ -1,4 +1,3 @@
-import React from 'react'
 import { Icon, Link as ChakraLink } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 

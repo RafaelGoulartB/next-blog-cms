@@ -1,4 +1,3 @@
-import React from 'react'
 import { SearchIcon, SpinnerIcon } from '@chakra-ui/icons'
 import {
   FormControl,
@@ -40,10 +39,9 @@ const SearchInput: React.FC<Props> = ({
         }}
       >
         <InputGroup>
-          <InputLeftElement
-            pointerEvents="none"
-            children={<SearchIcon color="gray.300" />}
-          />
+          <InputLeftElement pointerEvents="none">
+            <SearchIcon color="gray.300" />
+          </InputLeftElement>
 
           <Input
             type="search"

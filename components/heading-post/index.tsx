@@ -1,5 +1,4 @@
 import { Divider, Flex, Heading } from '@chakra-ui/react'
-import React from 'react'
 import PostDate from '../post-date'
 
 interface Props {

@@ -1,5 +1,4 @@
-import React from 'react'
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import HeadingPost from '../../components/heading-post'
 import Image from 'next/image'
 import graphQLClient from '../../config/graphql-client'
