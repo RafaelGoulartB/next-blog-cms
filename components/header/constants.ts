@@ -1,5 +1,9 @@
-import { IconType } from "react-icons/lib"
-import { AiFillInstagram, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai"
+import { IconType } from 'react-icons/lib'
+import {
+  AiFillInstagram,
+  AiOutlineTwitter,
+  AiFillLinkedin
+} from 'react-icons/ai'
 
 export interface navLinksProps {
   label: string
@@ -18,7 +22,7 @@ export const navLinks: navLinksProps[] = [
   {
     label: 'Articles',
     link: '/articles'
-  },
+  }
 ]
 export const socialLinks: socialLinksProps[] = [
   {
@@ -32,5 +36,5 @@ export const socialLinks: socialLinksProps[] = [
   {
     icon: AiFillLinkedin,
     link: 'https://likedin.com'
-  },
+  }
 ]

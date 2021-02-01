@@ -1,4 +1,3 @@
-import React from 'react'
 import { Flex } from '@chakra-ui/react'
 
 const RecentPostsContainer: React.FC = ({ children }) => {

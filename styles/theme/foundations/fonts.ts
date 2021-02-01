@@ -1,12 +1,12 @@
 export const fonts = {
-  body: "Inter, sans- serif",
-  heading: "Inter, sans-serif",
-  mono: "Inter, sans-serif",
+  body: 'Inter, sans- serif',
+  heading: 'Inter, sans-serif',
+  mono: 'Inter, sans-serif'
 }
 
 export const fontWeights = {
   normal: 400,
-  bold: 700,
+  bold: 700
 }
 
 export const fontSizes = {

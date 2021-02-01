@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme } from '@chakra-ui/react'
 
 // Global style overrides
 import styles from './styles'
@@ -9,11 +9,14 @@ import breakpoints from './foundations/breakpoints'
 import radii from './foundations/radii'
 import { fonts, fontSizes, fontWeights } from './foundations/fonts'
 
-
-
-
 const theme = extendTheme({
-  styles, colors, breakpoints, fonts, fontWeights, fontSizes, radii
+  styles,
+  colors,
+  breakpoints,
+  fonts,
+  fontWeights,
+  fontSizes,
+  radii
 })
 
-export default theme;
+export default theme

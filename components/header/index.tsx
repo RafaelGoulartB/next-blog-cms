@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import { Flex, MenuItem, Box } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router'
@@ -36,11 +36,11 @@ const MenuItems: React.FC<MenuItem> = ({ children, link, onClick }) => {
 }
 
 const Header: React.FC = props => {
-  const [show, setShow] = React.useState(false)
+  const [show, setShow] = useState(false)
   const handleToggle = () => setShow(!show)
 
-  const [search, setSearch] = React.useState('')
-  const [isSearchLoading, setIsSearchLoading] = React.useState(false)
+  const [search, setSearch] = useState('')
+  const [isSearchLoading, setIsSearchLoading] = useState(false)
 
   return (
     <Flex
