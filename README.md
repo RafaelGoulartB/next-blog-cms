@@ -80,7 +80,7 @@ This project was made using the follow technologies:
 **You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then:**
 
 ### Rename env file
-Rename `.env-exemple` to `.env`
+Rename `.env-exemple` to `.env` and add a `GRAPHQL_URL_ENDPOINT`
 ### Install Dependencies
 ```bash
 yarn install
