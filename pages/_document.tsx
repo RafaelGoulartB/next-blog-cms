@@ -44,6 +44,18 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.NuVidioId = "rafael.nuvidio.test";
+            window.NuVidioConfigs = {
+              fabButton: true,
+            }
+          `,
+          }}
+        />
+        <script type="text/javascript" src="https://hmlwidget.nuvidio.com/init.js" async></script>
       </Html>
     )
   }
