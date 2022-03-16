@@ -60,13 +60,13 @@ class MyDocument extends Document {
           }}
         />
 
-        {/* <div
+        <div
           dangerouslySetInnerHTML={{
             __html: `
             <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="dc8ae365-5602-4692-8174-333d69a515c9";(function(){d = document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
           `
           }}
-        /> */}
+        />
       </Html>
     )
   }
